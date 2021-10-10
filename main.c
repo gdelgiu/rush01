@@ -6,30 +6,28 @@
 /*   By: gdel-giu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 12:10:18 by gdel-giu          #+#    #+#             */
-/*   Updated: 2021/10/10 12:23:29 by gdel-giu         ###   ########.fr       */
+/*   Updated: 2021/10/10 23:05:31 by dlogli           ###   ########.fr       */
 /*   Updated: 2021/10/09 15:53:18 by dgioia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <unistd.h>
-#include "input_checker.c"
-#include "puzzle_solver.c"
 
-void print_error(void)
+void	print_error(void)
 {
 	write(1, "Error\n", 6);
 }
 
-int main(int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
-	int values[16];
-	int mat[6][6];
+	int	values[16];
+	int	mat[6][6];
+	int	x;
+	int	y;
 
-	int y, x;
 	x = 1;
 	y = 1;
-	if (argc !=  2)
+	if (argc != 2)
 	{
 		print_error();
 		return (0);
@@ -54,9 +52,8 @@ int main(int argc, char *argv[])
 			}
 			x = 1;
 			y++;
-			printf("\n");
 		}
-	return (0);
+		return (0);
 	}
 	else
 	{
