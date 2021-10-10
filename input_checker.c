@@ -6,12 +6,9 @@
 /*   By: gdel-giu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 16:20:49 by gdel-giu          #+#    #+#             */
-/*   Updated: 2021/10/10 22:57:06 by mlatifi          ###   ########.fr       */
+/*   Updated: 2021/10/10 23:07:08 by mlatifi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include "stdlib.h"
 
 int	puzzle_is_possible(char *str)
 {
