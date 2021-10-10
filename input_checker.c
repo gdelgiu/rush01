@@ -6,17 +6,17 @@
 /*   By: gdel-giu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 16:20:49 by gdel-giu          #+#    #+#             */
-/*   Updated: 2021/10/10 12:22:47 by gdel-giu         ###   ########.fr       */
+/*   Updated: 2021/10/10 22:57:06 by mlatifi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "stdlib.h"
 
-int puzzle_is_possible(char *str)
+int	puzzle_is_possible(char *str)
 {
-	int i;
-	int strk;
+	int	i;
+	int	strk;
 
 	i = 0;
 	strk = 0;
@@ -41,16 +41,18 @@ int puzzle_is_possible(char *str)
 	return (1);
 }
 
-int check_input(char *str, int *input)
+int	check_input(char *str, int *input)
 {
-	int i;
-	int check; 
+	int	i;
+	int	check;
 
 	i = 0;
 	check = 0;
-	while(str[i])
+	while (str[i])
 	{
-		if ((str[i] >= '1' && str[i] <= '4') && (str[i + 1] == ' ' || (str[i + 1] == '\0' && str[i - 1] == ' ')))
+		if ((str[i] >= '1' && str[i] <= '4')
+			&& (str[i + 1] == ' '
+				|| (str[i + 1] == '\0' && str[i - 1] == ' ')))
 		{
 			input[check] = str[i] - '0';
 			check++;
